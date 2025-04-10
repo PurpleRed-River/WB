@@ -1,0 +1,208 @@
+display current-configuration
+#
+ version 7.1.070, Release 1119P20
+#
+ sysname A36-36-5560
+#
+ip vpn-instance MGMT
+ description MGMT
+#
+ telnet server enable
+#
+ irf mac-address persistent timer
+ irf auto-update enable
+ undo irf link-delay
+ irf member 1 priority 32
+ irf member 2 priority 1
+#
+ lldp global enable
+#
+ password-recovery enable
+#
+vlan 1
+#
+vlan 12
+               #
+vlan 17
+#
+vlan 2200
+#
+irf-port 1/2
+ port group interface Ten-GigabitEthernet1/0/49
+#
+irf-port 2/1
+ port group interface Ten-GigabitEthernet2/0/49
+#
+ stp global enable
+#
+interface NULL0
+#
+interface Vlan-interface1
+ ip address 10.50.50.4 255.255.255.0
+#
+interface Vlan-interface12
+#
+interface GigabitEthernet1/0/1
+ port link-mode bridge
+ description A32-2-SR6604 ·
+                port access vlan 12
+#
+interface GigabitEthernet1/0/2
+ port link-mode bridge
+ description A32-8-USG 庺USGǽ/V2.6
+ port access vlan 12
+#
+interface GigabitEthernet1/0/3
+ port link-mode bridge
+ description · A32-19-SR6604
+ port access vlan 12
+#
+interface GigabitEthernet1/0/4
+ port link-mode bridge
+ description A36-36-5560 뽻
+ port access vlan 12
+#
+interface GigabitEthernet1/0/5
+ port link-mode bridge
+ description A28-2-S10508X ȫĽ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/6
+                port link-mode bridge
+ description A34-8-USG ǽ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/7
+ port link-mode bridge
+ description A28-35-GAP բ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/8
+ port link-mode bridge
+ description description A28-35-GAP բ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/9
+ port link-mode bridge
+ description ҵĵ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/10
+ port link-mode bridge
+ description A28-17-F5080 ǽ
+ port access vlan 12
+               #
+interface GigabitEthernet1/0/11
+ port link-mode bridge
+ description A30-17-F5080 ǽ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/12
+ port link-mode bridge
+ port access vlan 12
+#
+interface GigabitEthernet1/0/13
+ port link-mode bridge
+ description AD-1000-B2200-Q9 ؾ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/14
+ port link-mode bridge
+ description A28-21-AD-1000 ؾ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/15
+ port link-mode bridge
+ description A36-32-G3000 ֤1
+                port access vlan 12
+#
+interface GigabitEthernet1/0/16
+ port link-mode bridge
+ description A36-28-V3000 ǩǩ1
+ port access vlan 12
+#
+interface GigabitEthernet1/0/17
+ port link-mode bridge
+ description A36-24-G3000 ֤2
+ port access vlan 12
+#
+interface GigabitEthernet1/0/18
+ port link-mode bridge
+ description A36-10-12 360VPN
+ port access vlan 12
+#
+interface GigabitEthernet1/0/19
+ port link-mode bridge
+ description A38-32-G3000 ֤1
+ port access vlan 12
+#
+interface GigabitEthernet1/0/20
+                port link-mode bridge
+ description A38-28-V3000 ǩǩ1
+ port access vlan 12
+#
+interface GigabitEthernet1/0/21
+ port link-mode bridge
+ description A38-24-G3000 1
+ port access vlan 12
+#
+interface GigabitEthernet1/0/22
+ port link-mode bridge
+ description A26-16-RSASNX3-S ©ɨϵͳ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/23
+ port link-mode bridge
+ description A34-15-AD-1000 ȫָؾ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/24
+ port link-mode bridge
+ description A32-15-AD-1000 ȫָؾ
+ port access vlan 12
+               #
+interface GigabitEthernet1/0/25
+ port link-mode bridge
+ description A24-15-OSM Ӧÿӻϵͳ1
+ port access vlan 12
+#
+interface GigabitEthernet1/0/26
+ port link-mode bridge
+ description A32-34-SG-6000 ǽ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/27
+ port link-mode bridge
+ description A32-31-IPS IPSַ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/28
+ port link-mode bridge
+ description A34-34-SG-6000 ǽ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/29
+ port link-mode bridge
+                description A34-31-IPS IPSַ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/30
+ port link-mode bridge
+ description A36-38-NX5-HD1600 WEBӦ÷ǽ
+ port access vlan 12
+#
+interface GigabitEthernet1/0/31
+ port link-mode bridge
+ description A36-22-5560 뽻
+ port access vlan 12
+#
+interface GigabitEthernet1/0/32
+ port link-mode bridge
+ description A36-20-6800-4C 
+ port access vlan 12
+#
+interface GigabitEthernet1/0/33
+ port link-mode bridge
+ description A36-16-6800-4C Ļ
+ port access vlan 12
+#

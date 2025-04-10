@@ -1,0 +1,70 @@
+display current-configuration
+#
+ version 7.1.064, Release 7809P25
+#
+ sysname A32-34.25-29
+#
+ip vpn-instance MGM
+ description MGMT
+#
+ip vpn-instance MGMT
+ description MGMT
+#
+ irf mac-address persistent always
+ irf auto-update enable
+ irf auto-merge enable
+ undo irf link-delay
+ irf member 1 priority 1
+ irf member 2 priority 1
+#
+ password-recovery enable
+#
+vlan 1
+#
+vlan 71 to 72
+               #
+vlan 1000 to 1001
+#
+irf-port 1/2
+ port group interface Ten-GigabitEthernet1/3/0/22 mode enhanced
+ port group interface Ten-GigabitEthernet1/3/0/23 mode enhanced
+#
+irf-port 2/1
+ port group interface Ten-GigabitEthernet2/3/0/22 mode enhanced
+ port group interface Ten-GigabitEthernet2/3/0/23 mode enhanced
+#
+interface Route-Aggregation1
+ ip address 10.25.0.1 255.255.255.0
+#
+interface NULL0
+#
+interface Vlan-interface71
+ ip address 10.25.99.254 255.255.255.0
+#
+interface Vlan-interface72
+ ip address 10.25.100.254 255.255.255.0
+#
+interface GigabitEthernet1/3/0/0
+                port link-mode route
+#
+interface GigabitEthernet1/3/0/1
+ port link-mode route
+ description Ļ
+ ip address 10.25.2.22 255.255.255.252
+#
+interface GigabitEthernet1/3/0/2
+ port link-mode route
+#
+interface GigabitEthernet1/3/0/3
+ port link-mode route
+#
+interface GigabitEthernet1/3/0/4
+ port link-mode route
+ description to-shuiwu
+#
+interface GigabitEthernet1/3/0/5
+ port link-mode route
+#
+interface GigabitEthernet1/3/0/6
+ port link-mode route
+#

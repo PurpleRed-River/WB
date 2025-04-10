@@ -1,0 +1,70 @@
+display current-configuration
+#
+ version 7.1.070, Release 7634P11
+#
+mdc Admin id 1
+#
+ sysname CoreB
+#
+ clock protocol none
+#
+ip vpn-instance Anquanguanli
+#
+ip vpn-instance Jingdianwangluo
+#
+ip vpn-instance MGMT
+ description MGMT
+#
+ip vpn-instance Shujuhulian
+#
+ip vpn-instance Shujujiaohuan
+#
+ip vpn-instance VPC-ceshi
+#
+ip vpn-instance Vpc-shengchan
+               #
+ telnet server enable
+#
+ forward-path-detection enable
+#
+ irf mac-address persistent always
+ irf auto-update enable
+ irf auto-merge enable
+ undo irf link-delay
+ irf member 1 priority 1
+ irf member 2 priority 1
+ irf mode normal
+#
+track 101 list boolean or
+ object 102
+ object 103
+#
+track 102 nqa entry admin jingdian1 reaction 1
+#
+track 103 nqa entry admin jingdian2 reaction 1
+#
+track 111 list boolean or
+ object 112
+                object 113
+#
+track 112 nqa entry admin shengchan1 reaction 1
+#
+track 113 nqa entry admin shengchan2 reaction 1
+#
+track 121 list boolean or
+ object 122
+ object 123
+#
+track 122 nqa entry admin ceshi1 reaction 1
+#
+track 123 nqa entry admin ceshi2 reaction 1
+#
+ mirroring-group 1 local
+ mirroring-group 2 local
+ mirroring-group 3 local
+#
+ lldp global enable
+#
+ system-working-mode standard
+ password-recovery enable
+#

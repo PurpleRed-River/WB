@@ -1,0 +1,24 @@
+display current-configuration
+#
+ version 7.1.070, Release 6526
+#
+ sysname A30-30-6520
+#
+ip vpn-instance MGMT
+ description MGMT
+#
+ telnet server enable
+#
+ irf mac-address persistent timer
+ irf auto-update enable
+ undo irf link-delay
+ irf member 1 priority 32
+#
+ lldp global enable
+#
+ password-recovery enable
+#
+vlan 1
+#
+vlan 12
+#

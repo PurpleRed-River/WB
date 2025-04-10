@@ -1,0 +1,93 @@
+display current-configuration
+#
+ version 7.1.070, Release 2612P06
+#
+ sysname C438UC630Ujieru
+#
+ip vpn-instance MGMT
+ description MGMT
+#
+ irf mac-address persistent timer
+ irf auto-update enable
+ undo irf link-delay
+ irf member 1 priority 1
+ irf member 2 priority 1
+#
+ lldp global enable
+#
+ system-working-mode standard
+ hardware-resource switch-mode 0
+ hardware-resource routing-mode ipv6-64
+ hardware-resource vxlan l2gw
+ fan prefer-direction slot 1 port-to-power 
+ fan prefer-direction slot 2 port-to-power 
+ password-recovery enable
+               #
+vlan 1
+#
+vlan 9 to 10
+#
+vlan 16
+#
+irf-port 1/2
+ port group interface FortyGigE1/0/49
+ port group interface FortyGigE1/0/50
+#
+irf-port 2/1
+ port group interface FortyGigE2/0/49
+ port group interface FortyGigE2/0/50
+#
+ stp global enable
+#
+interface NULL0
+#
+interface Vlan-interface1
+ dhcp client identifier ascii 40fe957f40cc-VLAN0001
+#
+interface Vlan-interface10
+                description to-pingan
+ ip address 10.25.16.253 255.255.255.0
+#
+interface Vlan-interface16
+ ip address 10.25.11.253 255.255.255.0
+#
+interface FortyGigE1/0/51
+ port link-mode bridge
+#
+interface FortyGigE1/0/52
+ port link-mode bridge
+#
+interface FortyGigE1/0/53
+ port link-mode bridge
+#
+interface FortyGigE1/0/54
+ port link-mode bridge
+#
+interface FortyGigE2/0/51
+ port link-mode bridge
+#
+interface FortyGigE2/0/52
+ port link-mode bridge
+               #
+interface FortyGigE2/0/53
+ port link-mode bridge
+#
+interface FortyGigE2/0/54
+ port link-mode bridge
+#
+interface FortyGigE1/0/49
+#
+interface FortyGigE1/0/50
+#
+interface FortyGigE2/0/49
+#
+interface FortyGigE2/0/50
+#
+interface M-GigabitEthernet0/0/0
+ ip binding vpn-instance MGMT
+ ip address 10.25.9.161 255.255.255.0
+ dhcp client identifier hex 0240fe957f40cc
+#
+interface M-GigabitEthernet0/0/1
+ dhcp client identifier hex 0240fe957f40cc
+#
