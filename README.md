@@ -1,5 +1,7 @@
 # :)
 
+
+
 ## H3Cback.py
 
 用于批量备份 H3C 交换机配置的脚本。它通过 SSH 连接到指定的交换机，执行 display device manuinfo 获取序列号（SN），并执行 display current-configuration 获取当前配置，最终将配置保存为本地文件。
