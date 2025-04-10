@@ -1,24 +1,0 @@
-display current-configuration
-#
- version 7.1.064, Release 7809P25
-#
- sysname A34-32.2-6
-#
-ip vpn-instance MGMT
- description MGMT
-#
- telnet server enable
-#
- irf mac-address persistent always
- irf auto-update enable
- irf auto-merge enable
- undo irf link-delay
- irf member 1 priority 1
- irf member 2 priority 1
-#
-nat address-group 1
- address 10.23.36.1 10.23.36.1
-#
-nat address-group 66
- address 10.25.5.100 10.25.5.100
-#
