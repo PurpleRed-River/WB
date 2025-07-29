@@ -13,3 +13,7 @@ wheels/
 *.xlsx
 *.log
 configs/
+H3C_Network_Topology/
+*.csv
+*.TXT
+*.DAT

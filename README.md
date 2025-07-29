@@ -115,3 +115,22 @@ options:
 ========================================
 ```
 
+## FWconfigs.py
+
+用于提取防火墙策略配置，生成策略记录底账使用，支持启明星辰USG与山石防火墙。
+
+```
+usage: FWconfigs.py [-h] -i INPUT [-o OUTPUT] [--verbose] [--encoding ENCODING]
+
+将服务器配置文本转换为 CSV 表格
+
+options:
+  -h, --help           show this help message and exit
+  -i, --input INPUT    输入的配置文件路径
+  -o, --output OUTPUT  输出的 CSV 文件路径（默认: 输入文件名.csv）
+  --verbose            启用详细日志输出
+  --encoding ENCODING  指定输入文件编码（如 gb2312, gbk, utf-8），默认使用 gb2312
+
+示例: python FWconfigs.py -i config.txt --verbose --encoding gb2312
+```
+
