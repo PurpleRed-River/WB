@@ -134,3 +134,23 @@ options:
 示例: python FWconfigs.py -i config.txt --verbose --encoding gb2312
 ```
 
+## FWconfigsAN.py
+
+用于提取防火墙策略配置，生成月度策略记录底账使用，支持启明星辰USG、山石防火墙、天融信防火墙。
+
+```
+usage: FWconfigsAN.py [-h] -i INPUT [-o OUTPUT] [--verbose] [--encoding ENCODING] [--resolve-addresses]
+
+将防火墙策略配置文件转换为 CSV 表格
+
+options:
+  -h, --help              显示此帮助信息并退出
+  -i, --input INPUT       输入的配置文件路径（必填）
+  -o, --output OUTPUT     输出的 CSV 文件路径（默认: 输入文件名.csv）
+  --verbose               启用详细日志输出
+  --encoding ENCODING     指定输入文件编码（如 gb2312, gbk, utf-8），默认使用 gb2312
+  --resolve-addresses     解析地址组为实际 IP 段（仅适用于第一种和第二种配置）
+
+示例: python FWconfigsAN.py -i config.txt --verbose --encoding gb2312 --resolve-addresses
+```
+
